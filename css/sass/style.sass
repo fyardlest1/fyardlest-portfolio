@@ -1,0 +1,1904 @@
+@import '_variables.sass'
+@import '_mixin.sass'
+@import '_font.sass'
+@import '_themecolors.sass'
+
+*
+    margin: 0
+    padding: 0
+
+html,body
+    overflow-x: hidden
+
+body
+    position: relative
+
+html
+    scroll-behavior: smooth
+
+\:root
+    --primary-color: #754ef9
+    --primary-orverlay-color: 117, 78, 249
+
+// Theme color css
+
+.body-theme-color-1
+    --primary-color: #45B164
+    --primary-orverlay-color: 69, 177, 100
+
+    .main-banner:after, .about-img-wp .about-img:after, .portfolio-items:after, .testimonial-sec:after, .skill-sec .sec-wp:after, .blog-sec:after, .contact-sec:after
+        background-image: url(../../images/color-1-pattern.svg)
+
+.body-theme-color-2
+    --primary-color: #EA4C89
+    --primary-orverlay-color: 234, 76, 137
+
+    .main-banner:after, .about-img-wp .about-img:after, .portfolio-items:after, .testimonial-sec:after, .skill-sec .sec-wp:after, .blog-sec:after, .contact-sec:after
+        background-image: url(../../images/color-2-pattern.svg)
+
+.body-theme-color-3
+    --primary-color: #004A6B
+    --primary-orverlay-color: 0, 74, 107
+
+    .main-banner:after, .about-img-wp .about-img:after, .portfolio-items:after, .testimonial-sec:after, .skill-sec .sec-wp:after, .blog-sec:after, .contact-sec:after
+        background-image: url(../../images/color-3-pattern.svg)
+
+.body-theme-color-4
+    --primary-color: #FF6D37
+    --primary-orverlay-color: 255, 109, 55
+
+    .main-banner:after, .about-img-wp .about-img:after, .portfolio-items:after, .testimonial-sec:after, .skill-sec .sec-wp:after, .blog-sec:after, .contact-sec:after
+        background-image: url(../../images/color-4-pattern.svg)
+
+.body-theme-color-5
+    --primary-color: #FBCA06
+    --primary-orverlay-color: 251, 202, 6
+
+    .main-banner:after, .about-img-wp .about-img:after, .portfolio-items:after, .testimonial-sec:after, .skill-sec .sec-wp:after, .blog-sec:after, .contact-sec:after
+        background-image: url(../../images/color-5-pattern.svg)
+
+.body-theme-color-6
+    --primary-color: #FF4C60
+    --primary-orverlay-color: 255, 76, 96
+
+    .main-banner:after, .about-img-wp .about-img:after, .portfolio-items:after, .testimonial-sec:after, .skill-sec .sec-wp:after, .blog-sec:after, .contact-sec:after
+        background-image: url(../../images/color-6-pattern.svg)
+
+
+// End Theme color css
+
+
+// common css
+
+body
+    font-family: $body-font
+    color: $black-color
+    text-rendering: optimizeSpeed
+
+a
+    text-decoration: none !important
+    outline: none !important
+    color: $black-color
+
+p
+    font-size: 16px
+    line-height: 26px
+    color: $text-color
+
+img
+    width: 100%
+
+.sec-wp
+    position: relative
+    z-index: 4
+
+.overflow-text
+    height: 300px
+    overflow: auto
+    overflow-x: hidden
+    padding-right: 10px
+    scrollbar-color: var(--primary-color) $black-color
+    scrollbar-width: thin
+
+.overflow-text::-webkit-scrollbar
+    width: 4px
+
+.overflow-text::-webkit-scrollbar-thumb
+    background: var(--primary-color)
+
+.overflow-text::-webkit-scrollbar-track
+    background: rgba($black-color, 0.1)
+
+.white-text
+    color: $white-color
+    h1
+        color: $white-color
+    h2
+        color: $white-color
+    h3
+        color: $white-color
+    h4
+        color: $white-color
+    h5
+        color: $white-color
+    h6
+        color: $white-color
+    p
+        color: $white-color
+    span
+        color: $white-color
+
+h1, h2, h3, h4, h5, h6
+    font-family: $title-font
+    font-weight: bold
+
+.h2-title
+    font-size: 44px
+    line-height: 50px
+    margin-bottom: 28px
+
+.h3-title
+    font-size: 34px
+    line-height: 44px
+
+.h4-title
+    font-size: 28px
+    line-height: 38px
+
+.h5-title
+    font-size: 24px
+    line-height: 34px
+
+.h6-title
+    font-size: 22px
+    line-height: 33px
+
+.headline-xl
+    font-size: 100px
+    line-height: 116px
+    margin-bottom: 20px
+    font-weight: bold
+
+    span 
+        display: block
+        font-family: $body-font
+        opacity: 0.10
+        letter-spacing: 0.8px
+
+
+    i
+        position: relative
+        font-style: normal
+
+        &::after
+            content: ""
+            position: absolute
+            top: 50%
+            left: 0
+            width: 100%
+            height: 20px
+            background: $white-color
+            z-index: -1
+            box-shadow: 0 3px 6px rgba(0,0,0,16%)
+            margin-top: 1px
+
+        b
+            position: relative
+
+            &:after
+                content: ""
+                position: absolute
+                top: 50%
+                left: 0
+                width: 24px
+                height: 20px
+                background: $white-color
+                z-index: 1
+                margin-top: 1px
+
+.sub-head
+    min-width: 187px
+    min-height: 54px
+    padding: 0 10px
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    border-radius: 100px
+    background: rgba(var(--primary-orverlay-color), 0.1)
+    font-size: 20px
+    text-transform: uppercase
+    color: var(--primary-color)
+    margin-bottom: 31px
+    font-family: $body-font
+    font-weight: normal
+
+.dotted-title
+        margin-bottom: 10px
+        position: relative
+        padding-bottom: 32px
+
+        span
+            position: relative
+            bottom: 0
+            width: 20px
+            height: 4px
+            background: var(--primary-color)
+            display: block
+            margin: 17px auto 0
+
+            &:after
+                content: ""
+                width: 20px
+                height: 4px
+                display: inline-block
+                background: var(--primary-color)
+                position: absolute
+                margin-right: -40px
+                right: 0
+                top: 0
+
+            &:before
+                content: ""
+                width: 20px
+                height: 4px
+                display: inline-block
+                background: var(--primary-color)
+                position: absolute
+                margin-left: -40px
+                left: 0
+                top: 0
+
+ul
+    list-style: none
+    margin: 0
+    padding: 0
+
+.form-input
+    width: 100%
+    height: 60px
+    border: 1px solid $border-color
+    outline: none !important
+    color: $text-color
+    background: $white-color
+    -webkit-appearance: none
+    border-radius: 5px
+    padding: 10px 25px
+
+.form-input.white-input
+    background: $white-color
+    padding: 10px 30px
+
+.form-input.bg-input
+    background: $white-color
+    padding: 10px 30px
+
+.form-input-wp
+    margin-bottom: 40px
+
+textarea.form-input
+    height: 205px
+    resize: none
+    padding: 36px 25px
+
+.form-input::-webkit-input-placeholder
+    color: $input-placeholder-color
+
+.form-input::-moz-placeholder
+    color: $input-placeholder-color
+
+.form-input:-ms-input-placeholder
+    color: $input-placeholder-color
+
+.form-input::-ms-input-placeholder
+    color: $input-placeholder-color
+
+.form-input::placeholder
+    color: $input-placeholder-color
+
+select option
+    color: $black-color
+
+select
+    color: $input-placeholder-color
+
+select::-ms-expand
+    display: none
+
+a:hover
+    color: initial
+
+video
+    width: 100%
+    outline: none
+
+
+blockquote
+    margin: 0 100px 30px
+
+    p
+        margin: 0
+        font-size: 30px
+        line-height: 45px
+        font-family: $title-font
+
+        &:before
+            content: "“"
+
+        &:after
+            content: "”"
+
+.swiper-pagination-bullet
+    width: 13px
+    height: 13px
+    background: var(--primary-color)
+    opacity: 0.15
+    transition: 0.4s !important
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active
+    background: $black-color
+    opacity: 1
+     
+.bg-color-pattern
+    background: #F9F9F9
+    position: relative
+    overflow: hidden
+    
+    &:after
+        content: ""
+        position: absolute
+        top: 0
+        left: 50%
+        width: 685px
+        height: 1015px
+        background-image: url(../../images/bg-pattern.svg)
+        background-position: top left
+        background-repeat: no-repeat
+        opacity: 0.5
+        z-index: 1
+        transform: translate(81%, 0)
+
+    &:before        
+        content: ""
+        position: absolute
+        bottom: 0
+        right: 50%
+        width: 685px
+        height: 1015px
+        background-image: url(../../images/bg-pattern.svg)
+        background-position: top right
+        background-repeat: no-repeat
+        opacity: 0.5
+        z-index: 1
+        transform: translate(-79%, 0)
+
+.for-des
+    display: block !important
+
+.for-mob
+    display: none !important
+
+// End common css
+
+// Button css
+
+.sec-btn
+    border-radius: 24px
+    width: 202px
+    height: 50px
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    background: var(--primary-color)
+    color: $white-color
+    position: relative
+    text-transform: uppercase
+    font-size: 15px
+    z-index: 1
+    outline: none !important
+    border: 1px solid transparent
+    box-shadow: 0 5px 30px rgb(0 0 0 / 8%)
+    transition: 0.5s
+
+    svg
+        margin-left: 10px
+        transition: 0.5s
+    
+    &:hover
+        background: transparent
+        color: $black-color
+        border-color: $black-color
+
+        svg
+            path
+                fill: $black-color
+
+.sec-btn.outline-btn
+    background: transparent
+    border-color: $black-color
+    color: $black-color
+
+.sec-btn.outline-btn:hover
+    background: $black-color
+    color: $white-color
+
+.sec-btn.sm-btn
+    width: 160px
+    height: 44px
+
+.sec-btn-link
+    display: inline-flex
+    align-items: center
+    color: var(--primary-color)
+    text-transform: uppercase
+    transition: 0.5s
+
+    svg
+        margin-left: 6px
+
+        path
+            transition: 0.3s
+            fill: var(--primary-color)
+
+    &:hover
+        color: $black-color
+
+        svg
+            path
+                fill: $black-color
+// End Button css
+
+
+
+// Header css
+
+.site-header
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 10
+    padding: 30px 0
+    transition: $transition
+    z-index: 99
+
+.site-logo
+    width: 197px
+
+    svg
+        width: 100%
+
+        path
+            transition: $transition
+
+        rect
+            fill: var(--primary-color)
+            transition: $transition
+
+.site-header.sticky_head
+    position: fixed
+    background: $white-color
+    padding: 10px 0
+    box-shadow: 0 20px 30px rgba(var(--primary-orverlay-color), 8%)
+
+    path
+        fill: $black-color
+
+.header-menu-wp
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.header-menu
+    ul
+        list-style: none
+        li
+            display: inline-block
+            margin: 0 10px
+            &:first-child
+                margin-left: 0
+            &:last-child
+                margin-right: 0
+            a
+                text-transform: capitalize
+                color: $text-color
+                transition: 0.3s
+
+                &:hover
+                    color: var(--primary-color)
+
+            .active
+                color: var(--primary-color)
+
+
+// End Header css
+
+// Banner css
+
+.main-banner
+    position: relative
+    padding: 220px 0 110px
+    overflow: hidden
+    background: #F7F6FB
+
+    &:after
+        content: ""
+        position: absolute
+        top: 50%
+        right: 0
+        width: 50px
+        height: 276px
+        background: url(../../images/pattern.svg)
+        pointer-events: none
+        transform: translate(0, -50%)
+
+.banner-img-wrapper
+    position: relative
+
+    svg
+        position: absolute
+        top: -65px
+        left: -29px
+        z-index: -1
+
+    path
+        fill: var(--primary-color)
+
+    .banner-left-part
+        position: absolute
+        top: -50%
+        right: 220px
+        width: 100vw
+        height: 100vw
+        background-color: $black-color
+        z-index: -1
+
+        &:after
+            +after-before
+            background-image: url(../../images/banner-pattern.png)
+            background-position: top right
+            background-repeat: no-repeat
+            opacity: 0.51
+
+
+.banner-content
+    padding-top: 74px
+    padding-left: 25px
+
+    .h5-title 
+        color: $text-color
+        letter-spacing: 0.5px
+        margin-bottom: 55px
+        font-weight: normal
+
+.banner-btn .sec-btn + .sec-btn 
+    margin-left: 8px
+
+.banner-follow
+    position: absolute
+    bottom: 55px
+    right: 60px
+    display: inline-flex
+    align-items: center
+
+    h4 
+        margin: 0
+        font-size: 18px
+        font-weight: 600
+        position: relative
+        display: flex
+        align-items: center
+
+        &:after 
+            content: ""
+            width: 55px
+            height: 1px
+            background: var(--primary-color)
+            display: inline-block
+            margin-left: 11px
+            margin-top: 4px
+
+
+    ul
+        padding-left: 35px
+        li 
+            margin: 0 12px
+            display: inline-block
+
+            &:first-child
+                margin-left: 0
+            &:last-child
+                margin-right: 0
+            
+            a
+                color: var(--primary-color)
+                transition: 0.5s
+
+                &:hover
+                    color: $black-color
+
+// End Banner css
+
+// About css
+
+.about-sec
+    padding: 100px 0 0
+
+.about-content
+    padding-right: 5px
+    padding-top: 21px
+
+    p
+        line-height: 35px
+        margin-bottom: 33px
+
+        &:last-of-type
+            margin: 0
+
+    .sec-btn
+        margin-top: 52px
+
+.about-img-wp 
+    width: 100%
+    height: 600px
+    padding-left: 38px
+    position: relative
+
+    .about-img 
+        width: 100%
+        height: 100%
+        +img-cover
+
+        &:after 
+            content: ""
+            position: absolute
+            top: 50%
+            right: -49px
+            width: 230px
+            height: 276px
+            background: url(../../images/pattern.svg)
+            transform: translate(0, -50%)
+            z-index: -1
+            background-position: right
+
+
+// End About css
+
+// Services css
+
+.services-sec
+    padding: 100px 0
+    
+    .sec-head-wp
+        margin-bottom: 68px
+
+.services-box
+    padding: 55px 20px 35px
+    background: $white-color
+    border-radius: 5px
+    box-shadow: 0 20px 30px rgba(var(--primary-orverlay-color), 18%)
+    transition: $transition
+
+    &:hover
+        background: var(--primary-color)
+
+        .services-icon
+            svg
+                path
+                    stroke: transparent
+                    fill: $white-color  
+                g
+                    stroke: $white-color
+
+
+        .h3-title
+            color: $white-color
+
+        .dotted-title
+            span
+                background: $white-color
+
+                &:after, &:before
+                    background: $white-color
+
+
+        p
+            color: $white-color
+
+        .sec-btn
+            background: $white-color
+            color: $black-color
+
+            svg 
+                path
+                    fill: $black-color
+
+    .services-icon
+        margin-bottom: 27px
+        transition: $transition
+
+        svg
+            path
+                stroke: transparent
+                fill: var(--primary-color)
+                transition: $transition
+            g
+                stroke: var(--primary-color)
+                transition: $transition
+
+    p
+        height: 115px
+        margin-bottom: 15px
+        transition: $transition
+
+// End Services css
+
+
+// Portfolio css
+
+.portfolio-sec
+    padding: 100px 0
+    position: relative
+
+.portfolio-tab
+    padding-bottom: 60px
+    ul
+        text-align: center
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+
+    li
+        display: inline-block
+        text-transform: capitalize
+        padding: 0 15px 10px
+        cursor: pointer
+        color: $text-color
+        font-size: 18px
+        position: relative
+
+        &:after
+            content: ""
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 0
+            background: var(--primary-color)
+            opacity: 0
+            transition: 0.3s
+        
+        &:hover
+            &:after
+                height: 3px
+                opacity: 1
+
+    .portfolio-active-tab
+        &:after
+            height: 3px
+            opacity: 1
+
+
+.portfolio-items
+    position: relative
+
+    &:after
+        content: ""
+        position: absolute
+        top: 108px
+        right: -35px
+        width: 235px
+        height: 276px
+        background: url(../../images/pattern.svg)
+        z-index: -1
+        background-position: right
+
+    .item
+        margin-bottom: 30px
+
+    .portfolio-img
+        width: 100%
+        height: 390px
+        +img-cover
+        position: relative
+        overflow: hidden
+
+        &:hover
+            .portfolio-box-hover
+                top: 0
+                opacity: 1
+
+    .portfolio-box-hover
+        position: absolute
+        top: 100%
+        left: 0
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        text-align: center
+        background: rgba(var(--primary-orverlay-color), 96%)
+        padding: 30px
+        transition: $transition
+
+        .h3-title
+            font-weight: normal
+
+        a
+            position: absolute
+            bottom: 30px
+            right: 20px
+            font-size: 14px
+            text-transform: uppercase
+            color: $white-color
+            display: inline-flex
+            align-items: flex-end
+            line-height: 14px
+
+            svg
+                margin-left: 10px
+
+        p
+            opacity: 0.5
+            max-width: 520px
+            margin: 0 auto
+            display: -webkit-box
+            -webkit-line-clamp: 5
+            -webkit-box-orient: vertical
+            overflow: hidden
+
+// End Portfolio css
+
+// Progress css
+
+.progress-sec
+    padding: 100px 0 0
+
+.progress-box
+    position: relative
+    display: block
+    padding: 40px
+    border-radius: 50%
+    background: $white-color
+    box-shadow: 0 15px 20px rgb(21 29 65 / 6%)
+
+.progress-box-text
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    text-align: center
+
+    h4
+        font-size: 20px
+        text-transform: uppercase
+        color: $text-color
+        font-weight: normal
+        font-family: $body-font
+        margin: 0
+
+    span
+        display: block
+
+    .countfect
+        font-size: 69px
+        font-family: $title-font
+        font-weight: bold
+
+        &:after
+            content: "+"
+            margin-left: 4px
+
+.circle-chart
+    width: 100%
+    height: 100%
+
+.circle-chart__circle
+    stroke: var(--primary-color)
+    stroke-width: 2  
+    stroke-linecap: square
+    fill: none
+    animation: circle-chart-fill 2s reverse /* 1 */ 
+    transform: rotate(-90deg) /* 2, 3 */
+    transform-origin: center /* 4 */
+
+
+.circle-chart__circle--negative
+    transform: rotate(-90deg) scale(1,-1) /* 1, 2, 3 */
+
+
+.circle-chart__background
+    stroke: rgba(var(--primary-orverlay-color), 0.2)
+    stroke-width: 0.3
+    fill: none 
+
+
+.circle-chart__info
+    animation: circle-chart-appear 2s forwards
+    opacity: 0
+    transform: translateY(0.3em)
+
+
+.circle-chart__percent
+    alignment-baseline: central
+    text-anchor: middle
+    font-size: 8px
+
+
+.circle-chart__subline
+    alignment-baseline: central
+    text-anchor: middle
+    font-size: 3px
+
+
+.success-stroke, .warning-stroke
+    stroke: var(--primary-color)
+
+.danger-stroke
+    stroke: #ff4444
+
+@keyframes circle-chart-fill
+    to
+        stroke-dasharray: 0 100
+
+@keyframes circle-chart-appear
+    to
+        opacity: 1
+        transform: translateY(0)
+
+// End Progress css
+
+// Testimonial css
+
+.testimonial-sec
+    padding: 100px 0 149px
+    position: relative
+
+    &:after
+        content: ""
+        position: absolute
+        top: -70px
+        left: 0
+        width: 53px
+        height: 276px
+        background: url(../../images/pattern.svg)
+        z-index: -1
+        background-position: right
+
+    .sec-head-wp
+        margin-bottom: 50px
+
+.testimonial-slider
+    overflow: hidden
+    padding-bottom: 73px
+
+.testimonial-box-wp
+    position: relative
+    padding: 0 21px
+
+    &:after
+        content: ""
+        position: absolute
+        top: 50%
+        left: 0
+        width: 100%
+        height: calc(100% - 42px)
+        background: var(--primary-color)
+        z-index: -1
+        transform: translate(0, -50%)
+
+.testimonial-box
+    position: relative
+    padding: 30px
+    text-align: center
+    box-shadow: 0 5px 10px rgb(0 0 0 / 8%)
+    background: $white-color
+
+    .testimonial-img-wp
+        position: relative
+        z-index: 2
+
+    .testimonial-img
+        width: 96px
+        height: 96px
+        background-size: cover
+        background-position: center
+        border-radius: 50%
+        margin: 21px auto 53px
+        position: relative
+
+        &:after
+            content: ""
+            position: absolute
+            top: 50%
+            left: 50%
+            width: 114px
+            height: 114px
+            background: var(--primary-color)
+            z-index: -1
+            transform: translate(-50%, -50%)
+            border-radius: 50%
+            opacity: 0.5
+
+
+        &:before
+            content: ""
+            position: absolute
+            top: 50%
+            left: 50%
+            width: 138px
+            height: 138px
+            background: var(--primary-color)
+            z-index: -1
+            transform: translate(-50%, -50%)
+            border-radius: 50%
+            opacity: 0.5
+
+    h6
+        font-size: 18px
+        line-height: 28px
+        margin-bottom: 11px
+
+    p
+        margin: 0
+        font-size: 14px
+        line-height: 24px
+
+    .overflow-text
+        height: 75px
+        max-width: 380px
+        margin: 0 auto
+
+// End Testimonial css
+
+// Skill css
+
+.skill-sec
+    padding: 100px 0 122px
+
+    &:after
+        opacity: 0.36
+        height: 680px
+        background-size: contain
+
+    .sec-wp
+        &:after
+            content: ""
+            position: absolute
+            bottom: -87px
+            right: 0
+            width: 53px
+            height: 276px
+            background: url(../../images/pattern.svg)
+            z-index: -1
+            background-position: right
+            pointer-events: none
+            
+    .sec-head-wp
+        margin-bottom: 88px
+
+.skill-box
+    margin-bottom: 76px
+
+    .h2-title
+        margin-bottom: 31px
+
+    p
+        margin: 0
+
+.progress-bar
+    background-color: rgba(var(--primary-orverlay-color), 0.15)
+    height: 5px
+    margin-bottom: 28px
+
+.progress
+    width: 0
+    height: 100%
+    background-color: var(--primary-color)
+
+.skill-btn
+    margin-top: 21px
+    text-align: center
+
+// End Skill csserv
+
+// Blog css
+
+.blog-sec
+    padding: 100px 0 0
+    position: relative
+
+    &:after
+        content: ""
+        position: absolute
+        bottom: 20px
+        left: 0
+        width: 53px
+        height: 276px
+        background: url(../../images/pattern.svg)
+        z-index: -1
+        background-position: right  
+
+    .sec-head-wp
+        margin-bottom: 60px
+
+.blog-img
+    width: 100%
+    height: 330px
+    margin-bottom: -40px
+    border-radius: 5px
+    +img-cover
+
+.blog-text
+    background: $white-color
+    padding: 19px 30px 37px
+    border-radius: 5px
+    box-shadow: 0 15px 20px rgba(var(--primary-orverlay-color), 0.18)
+
+    .blog-date
+        margin-bottom: 4px
+
+    .dotted-title
+        font-size: 18px
+        line-height: 30px
+        padding-bottom: 11px
+        span
+            margin-left: 40px
+
+    p
+        display: -webkit-box
+        -webkit-line-clamp: 2
+        -webkit-box-orient: vertical
+        overflow: hidden
+        margin-bottom: 34px
+
+// End Blog css
+
+
+// Contact css
+
+.contact-sec
+    padding: 100px 0 170px
+    position: relative
+
+    &:after
+        content: ""
+        position: absolute
+        bottom: 170px
+        right: 0
+        width: 53px
+        height: 276px
+        background: url(../../images/pattern.svg)
+        z-index: -1
+        background-position: right
+        
+    .sec-head-wp
+        margin-bottom: 85px
+
+.submit-btn
+    margin-top: 4px
+    text-align: center
+
+// End Contact css
+
+// Footer css
+
+.site-footer
+    background: $black-color
+    position: relative
+    
+.top-footer
+    padding: 113px 0 85px
+
+.footer-about
+    padding-right: 5px
+
+    .footer-logo
+        width: 197px
+        margin-bottom: 20px
+
+.footer-title
+    font-size: 18px
+    text-transform: uppercase
+    margin-bottom: 36px
+    margin-top: 10px
+
+.footer-menu-wp
+    padding-left: 57px
+    display: flex
+    justify-content: space-between
+
+.footer-menu
+    ul
+        li
+            display: block
+            margin-bottom: 19px
+
+        a
+            color: $white-color
+            display: inline-block
+        
+            &:hover
+                text-decoration: underline !important
+
+        .location-link
+            max-width: 200px
+            line-height: 40px
+            margin-top: -14px
+            
+.social-icon
+    text-align: right
+
+    ul
+        li
+            display: inline-flex
+            margin: 0 11px
+            align-items: center
+
+            &:first-child
+                margin-left: 0
+
+            &:last-child
+                margin-right: 0
+
+            a
+                color: $white-color
+                font-size: 22px
+                transition: 0.3s
+
+                &:hover
+                    color: var(--primary-color)
+
+.bottom-footer
+    padding: 25px 0 23px
+    border-top: 1px solid rgb(255 255 255 / 22%)
+
+    .copyright-text
+        p
+            margin: 0
+
+.scrolltop
+    position: absolute
+    top: -41px
+    right: 80px
+    z-index: 2
+    width: 82px
+    height: 82px
+    cursor: pointer
+    text-align: center
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 50%
+    background: var(--primary-color)
+    font-size: 30px
+    color: $white-color
+    transition: $transition
+
+    &:hover
+        background: $white-color
+        color: var(--primary-color)
+        box-shadow: 0 -15px 20px rgba(var(--primary-orverlay-color), 0.18)
+
+// End Footer css
+
+// choose Color css
+
+.choose-color-wp
+    position: fixed
+    top: 145px
+    right: -200px
+    z-index: 98
+    transition: $transition
+    pointer-events: none
+
+.choose-color-wp.color-toggled
+    right: 0
+
+.choose-color-btn
+    background: var(--primary-color)
+    height: 56px
+    border-radius: 50px 0 0 50px
+    display: inline-block
+    color: $white-color
+    font-weight: bold
+    text-transform: uppercase
+    box-shadow: 0 5px 30px rgb(0 0 0 / 8%)
+    pointer-events: auto
+    transition: 0.3s
+
+    button
+        background: transparent
+        border: none
+        width: 78px
+        height: 56px
+        border-right: 2px solid $white-color
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        outline: none
+
+        &:hover
+            svg
+                animation: loader 2s linear infinite
+
+    @keyframes loader
+        from
+            transform: rotate(360deg)
+        to
+            transform: rotate(0)
+
+    span
+        display: inline-flex
+        vertical-align: top
+        justify-content: center
+        align-items: center
+        height: 100%
+        width: 194px
+
+.choose-color-box
+    width: calc(100% - 78px)
+    margin-left: auto
+    background: $white-color
+    padding: 16px 20px 23px
+    border-radius: 0 0 0 25px
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16)
+    position: relative
+    z-index: 2
+    pointer-events: auto
+
+    p
+        font-weight: bold
+        color: $black-color
+
+    ul
+        width: 170px
+        display: flow-root
+        margin: 0 -8px -15px
+
+        li
+            display: inline-block
+            float: left
+            width: 40px
+            height: 40px
+            margin: 0 8px 15px
+            background: $black-color
+            border-radius: 3px
+            cursor: pointer
+
+        .active-color
+            box-shadow: 0 0 20px rgba(var(--primary-orverlay-color), 0.6)
+            
+
+// End choose Color css
+
+// Responsive css
+
+@media (min-width: 1500px)
+    .container
+        max-width: 1170px
+
+@media (max-width: 1399px)
+    .header-menu
+        ul
+            li
+                margin: 0 8px
+
+    .headline-xl
+        font-size: 7.1vw
+        line-height: 7.6vw
+
+@media (max-width: 1199px)
+    .header-menu
+        margin-left: -8px
+
+        ul
+            li
+                margin: 0 6px
+
+                a
+                    font-size: 14px
+
+    .banner-img-wrapper
+        .banner-left-part
+            right: 155px
+
+    .header-btn
+        .sec-btn
+            width: 170px
+
+    .headline-xl
+        font-size: 6.8vw
+
+        font::after, font b:after
+            height: 14px
+
+    .banner-content
+        .h5-title
+            font-size: 22px
+            line-height: 34px
+
+    .dotted-title
+        font-size: 28px
+        line-height: 38px
+
+    .portfolio-items
+        .portfolio-img
+            height: 300px
+
+    .progress-box-text
+        .countfect
+            font-size: 48px
+
+        h4
+            font-size: 18px
+            line-height: 24px
+
+    .progress-box
+        padding: 20px
+
+    .testimonial-sec
+        padding-bottom: 110px
+
+    .blog-img
+        height: 280px
+
+    .footer-about
+        padding-right: 0
+
+@media (max-width: 991px)
+    .for-des
+        display: none !important
+
+    .for-mob
+        display: block !important
+
+    .site-header
+        position: fixed
+        padding: 0
+        height: 80px
+        background: $black-color
+
+        .container
+            max-width: 100%
+            padding: 0
+            height: 100%
+
+            .row
+                margin: 0
+                height: 100%
+
+                .col-lg-3
+                    width: auto
+                    padding: 0
+                    height: 100%
+                    position: absolute
+                    top: 0
+                    left: 30px
+                    z-index: 2
+                    display: flex
+                    align-items: center
+
+                .col-lg-9
+                    padding: 0
+
+    .header-btn
+        .sec-btn
+            &:hover
+                background: $white-color
+
+    .menu-toggle
+        position: absolute
+        top: 50%
+        right: 30px
+        border: none
+        outline: none !important
+        background: transparent
+        width: 30px
+        padding: 0
+        transform: translate(0, -50%)
+        z-index: 100
+    
+        span
+            display: block
+            width: 100%
+            height: 3px
+            background: $white-color
+            margin-bottom: 8px
+            transition: 0.3s
+            
+            &:last-child
+                margin: 0
+
+    .header-menu
+        margin: 0    
+    
+    .header-menu-wp
+        display: block
+        height: 100vh
+        position: fixed
+        top: 0
+        right: 0
+        width: 312px
+        z-index: 99
+        transition: 1s cubic-bezier(.165,.84,.44,1)
+        overflow-y: auto
+        transform: translate3d(320px,0px,0px)
+        background: $black-color
+        padding: 80px 0 30px 50px
+
+    .header-right-wrapper
+        position: relative
+
+        &:after
+            content: ""
+            position: absolute
+            top: -40px
+            right: -15px
+            width: 0
+            height: 100vh
+            background: $black-color
+            opacity: 0.5
+            transition: 1s cubic-bezier(.165,.84,.44,1)
+            z-index: 2
+
+
+    .header-right-wrapper.toggled:after 
+        width: calc(100% + 30px)
+    
+    .toggled
+        .header-menu-wp
+            transform: translate3d(0,0px,0px)
+
+        .menu-toggle
+            span
+                &:nth-child(1)
+                    transform: rotate(45deg)
+                    position: relative
+                    top: 11px
+
+                &:nth-child(2)
+                    transform: rotate(-45deg)
+
+                &:nth-child(3)
+                    opacity: 0
+                    height: 0
+
+    .header-menu
+        ul
+            li
+                display: block
+                float: none
+                margin: 0
+                margin-bottom: max(20px, 4vh)
+
+                a
+                    display: inline-block
+                    font-size: max(16px, 2vh)
+                    color: $white-color
+
+    .banner-img-wrapper
+        .banner-left-part
+            display: none
+
+    .banner-img-wrapper
+        padding-left: 30px
+        max-width: 500px
+        margin: 0 auto
+        margin-top: 160px
+
+        svg
+            left: max(-30px, -4vw)
+            top: max(-85px, -15vw)
+
+
+    .headline-xl
+        font-size: 80px
+        line-height: 90px
+        margin-bottom: 30px
+
+    .headline-xl i:after, .headline-xl i b:after
+        display: none
+
+    .banner-follow
+        position: unset
+        text-align: center
+        justify-content: center
+        display: flex
+        margin-top: 60px
+
+
+    .banner-content
+        padding-left: 0
+        padding-top: 0
+        text-align: center
+
+
+    .main-banner
+        padding: 160px 0 80px
+
+
+    .about-sec
+        padding: 80px 0 0
+
+    .about-content 
+        padding: 0
+        text-align: center
+
+        p
+            margin-bottom: 15px
+
+        .sec-btn
+            margin-top: 20px
+
+    .about-img-wp
+        padding: 0
+        margin-bottom: 30px
+        height: 80vw
+        min-height: 300px
+
+    .services-box
+        max-width: 380px
+        margin: 0 auto
+        margin-bottom: 30px
+
+        p
+            height: auto
+
+        .services-icon
+            margin-bottom: 17px
+
+    .dotted-title
+        margin: 0
+        padding-bottom: 20px
+
+    .services-sec
+        padding: 80px 0
+
+    .portfolio-sec
+        padding: 60px 0
+
+    .progress-box
+        max-width: 300px
+        margin: 0 auto
+        margin-bottom: 30px
+
+    .progress-sec
+        padding: 80px 0 0
+
+    .progress-bar
+        margin-bottom: 10px
+
+    .testimonial-sec
+        padding: 80px 0
+
+    .skill-box
+        margin-bottom: 40px
+
+        .h2-title
+            margin-bottom: 15px
+
+    .skill-sec
+        padding: 80px 0
+
+        .sec-head-wp
+            margin-bottom: 68px
+
+    .skill-btn
+        margin-top: 0
+
+    .bg-color-pattern:after, .bg-color-pattern:before, .skill-sec .sec-wp:after, .portfolio-items:after, .testimonial-sec:after, .contact-sec:after
+        display: none
+
+    .blog-sec
+        padding: 80px 0 0
+
+    .blog-box
+        max-width: 480px
+        margin: 0 auto
+        margin-bottom: 30px
+
+    .form-input
+        height: 46px
+        padding: 10px 20px
+
+    .form-input-wp
+        margin-bottom: 30px
+
+    textarea.form-input
+        height: 140px
+        padding: 18px 20px
+
+    .contact-sec
+        padding: 80px 0
+
+        .sec-head-wp
+            margin-bottom: 50px
+
+    .banner-content
+        .h5-title
+            font-size: 20px
+            line-height: 30px
+
+    .portfolio-tab
+        li
+            padding: 0 8px 10px
+            font-size: 16px
+
+    .services-sec
+        .sec-head-wp
+            margin-bottom: 35px
+
+    .scrolltop
+        right: 30px
+        width: 60px
+        height: 60px
+        font-size: 24px
+        top: -30px
+
+    .footer-menu-wp
+        padding: 0
+
+    .top-footer
+        padding: 63px 0 45px
+
+    .footer-about
+        padding-bottom: 30px
+
+    .portfolio-items
+        .portfolio-box-hover
+            padding: 15px
+
+            a
+                bottom: 15px
+                
+    .portfolio-tab
+        padding-bottom: 40px
+
+    .site-header.sticky_head
+        .menu-toggle
+            span
+                background: var(--primary-color)
+
+@media (max-width: 767px)
+
+    .choose-color-wp
+        right: -170px
+
+    .choose-color-btn
+        height: 46px
+        font-size: 14px
+
+        button
+            width: 50px
+            height: 46px
+
+            svg
+                width: 22px
+
+        span
+            width: 164px
+
+    .choose-color-box
+        width: calc(100% - 50px)
+
+        ul
+            li
+                width: 32px
+                height: 32px
+
+@media (max-width: 575px)
+    .container,
+    .container-fluid
+        padding: 0 30px
+
+    .footer-menu-wp
+        display: block
+
+    .footer-menu
+        margin-bottom: 40px
+
+    .footer-title
+        margin: 0
+        margin-bottom: 20px
+
+    .footer-menu
+        ul
+            li
+                margin-bottom: 10px
+
+    .top-footer
+        padding: 63px 0 0
+
+    .social-icon
+        text-align: left
+        margin-top: 30px
+
+    .headline-xl
+        font-size: 60px
+        line-height: 66px
+        margin-bottom: 30px
+
+    .main-banner
+        &:after
+            display: none
+
+    .banner-btn .sec-btn + .sec-btn
+        margin-top: 15px
+
+    .banner-content
+        .h5-title
+            margin-bottom: 30px
+
+    .banner-img-wrapper
+        margin-top: 120px
+
+    .banner-follow
+        display: block
+        text-align: center
+
+        h4
+            display: block
+            margin-bottom: 20px
+
+            &:after
+                display: none
+
+        ul
+            padding: 0
+
+            li
+                margin: 0 10px
+
+    .main-banner
+        padding: 160px 0 60px
+
+    .about-img-wp
+        .about-img
+            &:after
+                display: none
+
+    .testimonial-box
+        padding: 30px 15px
+
+    .blog-text
+        padding: 19px 20px 37px 
+
+    .blog-sec
+        &::after
+            display: none
+
+    .h2-title
+        font-size: 36px
+        line-height: 46px
+
+    .sub-head
+        margin-bottom: 20px
+        min-width: 167px
+        min-height: 46px
+        font-size: 18px
+
+@media (max-width: 400px)
+    .container,
+    .container-fluid
+        padding: 0 15px
+
+    .site-header
+        .container
+            .row
+                .col-lg-3
+                    left: 15px
+    .menu-toggle
+        right: 15px
+
+    .header-menu-wp
+        width: 280px
+
+    .scrolltop
+        right: 15px
+
+    .banner-follow
+        margin-top: 40px
+
+// End Responsive css
