@@ -737,7 +737,12 @@ blockquote p:after {
 .about-content p {
   line-height: 35px;
   margin-bottom: 33px;
+  opacity: 0.8;
 }
+/* .about-content p {
+    margin-bottom: 15px;
+} */
+
 .about-content p:last-of-type {
   margin: 0;
 }
@@ -938,7 +943,7 @@ blockquote p:after {
   margin-left: 10px;
 }
 .portfolio-items .portfolio-box-hover p {
-  opacity: 0.5;
+  opacity: 0.8;
   max-width: 520px;
   margin: 0 auto;
   display: -webkit-box;
@@ -1597,9 +1602,7 @@ blockquote p:after {
     padding: 0;
     text-align: center;
   }
-  .about-content p {
-    margin-bottom: 15px;
-  }
+  
   .about-content .sec-btn {
     margin-top: 20px;
   }
