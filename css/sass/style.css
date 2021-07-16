@@ -142,6 +142,14 @@ img .banner-img {
   border-radius: 10%;
 }
 
+.flag-btn {
+  width: 10%;
+  border-radius: 50%;
+  height: 30%;
+  margin: 0;
+  padding: 0;
+}
+
 .sec-wp {
   position: relative;
   z-index: 4;
@@ -236,7 +244,7 @@ h1, h2, h3, h4, h5, h6 {
 .headline-xl span {
   display: block;
   font-family: "Noto Sans";
-  opacity: 0.1;
+  opacity: 0.3;
   letter-spacing: 0.8px;
 }
 .headline-xl i {
@@ -268,6 +276,10 @@ h1, h2, h3, h4, h5, h6 {
   background: #ffffff;
   z-index: 1;
   margin-top: 1px;
+}
+
+.iam-color {
+  color: #754ef9;
 }
 
 .sub-head {
@@ -1367,7 +1379,7 @@ blockquote p:after {
   }
 
   .header-btn .sec-btn {
-    width: 170px;
+    width: 100px;
   }
 
   .headline-xl {
