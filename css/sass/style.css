@@ -56,7 +56,7 @@ html {
   --primary-orverlay-color: 117, 78, 249;
 }
 
-.body-theme-color-1 {
+/* .body-theme-color-1 {
   --primary-color: #45B164;
   --primary-orverlay-color: 69, 177, 100;
 }
@@ -70,12 +70,13 @@ html {
 }
 .body-theme-color-2 .main-banner:after, .body-theme-color-2 .about-img-wp .about-img:after, .body-theme-color-2 .portfolio-items:after, .body-theme-color-2 .testimonial-sec:after, .body-theme-color-2 .skill-sec .sec-wp:after, .body-theme-color-2 .blog-sec:after, .body-theme-color-2 .contact-sec:after {
   background-image: url(../../images/color-2-pattern.svg);
-}
+} */
 
 .body-theme-color-3 {
   --primary-color: #004A6B;
   --primary-orverlay-color: 0, 74, 107;
 }
+/* 
 .body-theme-color-3 .main-banner:after, .body-theme-color-3 .about-img-wp .about-img:after, .body-theme-color-3 .portfolio-items:after, .body-theme-color-3 .testimonial-sec:after, .body-theme-color-3 .skill-sec .sec-wp:after, .body-theme-color-3 .blog-sec:after, .body-theme-color-3 .contact-sec:after {
   background-image: url(../../images/color-3-pattern.svg);
 }
@@ -102,7 +103,7 @@ html {
 }
 .body-theme-color-6 .main-banner:after, .body-theme-color-6 .about-img-wp .about-img:after, .body-theme-color-6 .portfolio-items:after, .body-theme-color-6 .testimonial-sec:after, .body-theme-color-6 .skill-sec .sec-wp:after, .body-theme-color-6 .blog-sec:after, .body-theme-color-6 .contact-sec:after {
   background-image: url(../../images/color-6-pattern.svg);
-}
+} */
 
 body {
   font-family: "Noto Sans";
@@ -123,7 +124,22 @@ p {
 }
 
 img {
-  width: 100%;
+  width: 70%;
+  border-radius: 8px;
+}
+
+img .banner-img {
+  max-width: 50%;
+  height: 50%;
+}
+
+#skill-img {
+  max-width: 15%;
+  height: 15%;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 15px;
+  border-radius: 10%;
 }
 
 .sec-wp {
@@ -274,8 +290,9 @@ h1, h2, h3, h4, h5, h6 {
 .dotted-title {
   margin-bottom: 10px;
   position: relative;
-  padding-bottom: 32px;
+  padding-bottom: 20px;
 }
+
 .dotted-title span {
   position: relative;
   bottom: 0;
@@ -605,9 +622,10 @@ blockquote p:after {
 .banner-img-wrapper {
   position: relative;
 }
+
 .banner-img-wrapper svg {
   position: absolute;
-  top: -65px;
+  top: -80px;
   left: -29px;
   z-index: -1;
 }
@@ -616,10 +634,10 @@ blockquote p:after {
 }
 .banner-img-wrapper .banner-left-part {
   position: absolute;
-  top: -50%;
+  top: -35%;
   right: 220px;
   width: 100vw;
-  height: 100vw;
+  height: 70vw;
   background-color: #101010;
   z-index: -1;
 }
@@ -723,7 +741,6 @@ blockquote p:after {
 }
 .about-img-wp .about-img {
   width: 100%;
-  height: 100%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1015,7 +1032,7 @@ blockquote p:after {
   pointer-events: none;
 }
 .skill-sec .sec-head-wp {
-  margin-bottom: 88px;
+  margin-bottom: 68px;
 }
 
 .skill-box {
@@ -1050,13 +1067,13 @@ blockquote p:after {
   background-position: right;
 }
 .blog-sec .sec-head-wp {
-  margin-bottom: 60px;
+  margin-bottom: 68px;
 }
 
 .blog-img {
   width: 100%;
-  height: 330px;
-  margin-bottom: -40px;
+  height: 250px;
+  margin-bottom: -10px;
   border-radius: 5px;
   background-position: center;
   background-size: cover;
@@ -1330,7 +1347,7 @@ blockquote p:after {
   }
 
   .headline-xl {
-    font-size: 7.1vw;
+    font-size: 6.1vw;
     line-height: 7.6vw;
   }
 }
@@ -1375,7 +1392,7 @@ blockquote p:after {
   }
 
   .blog-img {
-    height: 280px;
+    height: 260px;
   }
 
   .footer-about {
@@ -1657,7 +1674,7 @@ blockquote p:after {
     padding: 60px 0;
   }
   .contact-sec .sec-head-wp {
-    margin-bottom: 50px;
+    margin-bottom: 68px;
   }
 
   .banner-content .h5-title {
@@ -1671,7 +1688,7 @@ blockquote p:after {
   }
 
   .skills-sec .sec-head-wp {
-    margin-bottom: 35px;
+    margin-bottom: 68px;
   }
 
   .scrolltop {
