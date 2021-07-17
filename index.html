@@ -420,7 +420,7 @@
                     </div>
                 </div>
 
-                <form name="portfolio-contact" data-netlify="true" class="contact-form wow fadeup-animation" data-wow-duration="1s" data-wow-delay="0.2s" method="POST">
+                <form name="portfolio-contact" data-netlify="true" data-netlify-recaptcha="true" class="contact-form wow fadeup-animation" data-wow-duration="1s" data-wow-delay="0.2s" method="POST">
                     <div class="row gx-5">
                         <div class="col-md-6">
                             <div class="form-input-wp">
@@ -430,6 +430,9 @@
                         <div class="col-md-6">
                             <div class="form-input-wp">
                                 <input type="email" class="form-input" name='email' placeholder="Email" required>
+                                <div id="email-no-share" class="form-text text-danger">
+                                    <em>I'll never share your email with anyone else.</em>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -444,8 +447,11 @@
                         </div>
                         <div class="col-md-12">
                             <div class="form-input-wp">
-                                <textarea class="form-input" placeholder="Message" name='message' cols="30" rows="4"></textarea>
+                                <textarea class="form-input" placeholder="Message" name='message' cols="15" rows="4"></textarea>
                             </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class='mt-2' data-netlify-recaptcha="true"></div>
                         </div>
                         <div class="col-md-12">
                             <div class="submit-btn">
