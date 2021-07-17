@@ -372,7 +372,7 @@ ul {
 textarea.form-input {
   height: 205px;
   resize: none;
-  padding: 36px 25px;
+  padding: 30px 15px;
 }
 
 .form-input::-moz-placeholder {
