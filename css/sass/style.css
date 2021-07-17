@@ -737,7 +737,7 @@ blockquote p:after {
 .about-content p {
   line-height: 35px;
   margin-bottom: 33px;
-  opacity: 0.8;
+  opacity: 1;
 }
 /* .about-content p {
     margin-bottom: 15px;
@@ -1116,7 +1116,7 @@ blockquote p:after {
 }
 .blog-text p {
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   margin-bottom: 34px;
