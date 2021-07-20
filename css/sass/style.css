@@ -256,7 +256,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 50%;
   left: 0;
-  width: 100%;
+  width: 80%;
   height: 20px;
   background: #ffffff;
   z-index: -1;
@@ -271,7 +271,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 50%;
   left: 0;
-  width: 24px;
+  width: 22px;
   height: 20px;
   background: #ffffff;
   z-index: 1;
@@ -1368,7 +1368,7 @@ blockquote p:after {
   }
 
   .headline-xl {
-    font-size: 6.1vw;
+    font-size: 5.2vw;
     line-height: 7.6vw;
   }
 }
