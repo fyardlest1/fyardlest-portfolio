@@ -1368,8 +1368,8 @@ blockquote p:after {
   }
 
   .headline-xl {
-    font-size: 5vw;
-    line-height: 7.5vw;
+    font-size: 4.5vw;
+    line-height: 7.3vw;
   }
 }
 @media (max-width: 1199px) {
