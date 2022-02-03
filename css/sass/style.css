@@ -236,7 +236,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .headline-xl {
-  font-size: 94px;
+  font-size: 98px;
   line-height: 110px;
   margin-bottom: 20px;
   font-weight: bold;
@@ -245,7 +245,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   font-family: "Noto Sans";
   opacity: 0.2;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.7px;
 }
 .headline-xl i {
   position: relative;
@@ -271,8 +271,8 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 48%;
   left: 0;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 18px;
   background: #ffffff;
   z-index: 1;
   margin-top: 1px;
