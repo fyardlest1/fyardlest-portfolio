@@ -236,8 +236,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .headline-xl {
-  font-size: 100px;
-  line-height: 116px;
+  font-size: 94px;
+  line-height: 110px;
   margin-bottom: 20px;
   font-weight: bold;
 }
@@ -254,13 +254,13 @@ h1, h2, h3, h4, h5, h6 {
 .headline-xl i::after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 48%;
   left: 0;
-  width: 80%;
-  height: 20px;
+  width: 70%;
+  height: 18px;
   background: #ffffff;
   z-index: -1;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
   margin-top: 1px;
 }
 .headline-xl i b {
@@ -269,9 +269,9 @@ h1, h2, h3, h4, h5, h6 {
 .headline-xl i b:after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 48%;
   left: 0;
-  width: 22px;
+  width: 20px;
   height: 20px;
   background: #ffffff;
   z-index: 1;
@@ -1697,7 +1697,7 @@ blockquote p:after {
   }
 
   .banner-content .h5-title {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
   }
 
@@ -1820,11 +1820,11 @@ blockquote p:after {
   }
 
   .banner-content .h5-title {
-    margin-bottom: 30px;
+    margin-bottom: 26px;
   }
 
   .banner-img-wrapper {
-    margin-top: 120px;
+    margin-top: 110px;
   }
 
   .banner-follow {
